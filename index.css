@@ -12,6 +12,13 @@
     font-family: 'Poppins',sans-serif;
 }
 
+/* :root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+} */
+
 :root{
     --bg-color: #1f242d;
     --second-bg-color: #323946;
@@ -34,7 +41,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 0.6rem 9%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -54,14 +61,14 @@ section{
 
 
 .logo{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-color);
     font-weight: 600;
     cursor: default;
 }
 
 .navbar a {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: var(--text-color);
     margin-left: 4rem;
     transition: .3s;
@@ -82,7 +89,7 @@ section{
 
 .home {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -102,7 +109,7 @@ section{
     }
 
     50%{
-        transform: translateY(.7rem);
+        transform: translateY(1.2rem);
 
     }
 
@@ -112,8 +119,9 @@ section{
 }
 
 .home-content h3{
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: 2.4rem;
+    font-weight: 450;
+    letter-spacing: .3rem;
 }
 
 .home-content h3:nth-of-type(2){
@@ -125,13 +133,22 @@ span {
 }
 
 .home-content h1{
-    font-size: 4.6rem;
-    font-weight: 700;
+    font-size: 4rem;
+    font-weight: 550;
     line-height: 1.3;
 }
 
 .home-content p {
     font-size: 1.6rem;
+    text-align: left;
+    /* padding: 2rem; */
+    letter-spacing: .2rem;
+    word-spacing: .2rem;
+    line-height: 3rem;
+}
+
+.home-content a {
+    margin-top: 3rem;
 }
 
 .social-media a {
@@ -160,7 +177,7 @@ span {
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 0.35rem var(--main-color);
     font-size: 1.6rem;
     color: var(--second-bg-color);
     letter-spacing: .1rem;
@@ -204,6 +221,8 @@ span {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    letter-spacing: .01rem;
+    word-spacing: .4rem;;
 }
 
 
@@ -213,6 +232,7 @@ span {
 
 .service-container {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -220,7 +240,8 @@ span {
 }
 
 .service-container .service-box {
-    flex: 1 1 30rem;
+    /* flex: 1 1 30rem; */
+    flex-direction: column;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
@@ -234,19 +255,32 @@ span {
     transform: scale(1.02);
 }
 
+.service-box {
+    width: 100%;
+}
+
 .service-box i{
-    font-size: 7rem;
+    font-size: 5rem;
     color:  var(--main-color);
 }
 
 .service-box h3 {
-    font-size: 2.6rem;
+    font-size: 2rem;
+    font-weight: 500;
 
 }
 
 .service-box p{
-    font-size:  1.6rem;
-    margin: 1rem 0 3rem;
+    font-size:  1.4rem;
+    margin: 0.5rem 0 1rem;
+    letter-spacing: .2rem;
+}
+
+.service-box .year {
+    font-size: 1.5rem ;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: .2rem;
 }
 
 .portfolio {
@@ -289,15 +323,15 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,.1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     padding: 0 4rem ;
-    transform:  translateY(100%);
-    transition: .5s ease;
+    /* transform:  translateY(100%);
+    transition: .5s ease; */
 }
 
 
@@ -306,7 +340,9 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
 
 }
 
@@ -376,7 +412,7 @@ span {
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
@@ -406,6 +442,12 @@ span {
 }
 
 
+.capito {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+
 /* BREAKPOINT */
 @media (max-width:1200px) {
     html{
@@ -422,6 +464,14 @@ span {
         padding: 10rem 3% 2rem;
     }
 
+    .logo{
+        font-size: 2rem;
+        /* color: var(--text-color); */
+        font-weight: 500;
+        /* cursor: default; */
+        letter-spacing: 0.2rem;
+    }
+
     .home-img img {
         width: 35vw;
         margin: 6rem;
@@ -432,9 +482,19 @@ span {
         padding-bottom: 7rem;
     }
 
+    .home-content p {
+        font-size: 1.3rem;
+        text-align: left;
+        /* padding: 2rem; */
+        letter-spacing: .1rem;
+        word-spacing: .25rem;
+        line-height: 2.5rem;
+    }
+
     .portfolio {
         padding-bottom: 7rem;
     }
+    
 
     .contact {
         min-height: auto;
@@ -485,11 +545,34 @@ span {
         font-size: 5rem;
     }
 
+    
+
     .home-img img {
         width: 50vw;
         margin: 6rem;
         border-radius: 50rem;
         
+    }
+
+    .home-content h1{
+        font-size: 3.8rem;
+    }
+
+    .home-content h3{
+        font-size: 3rem;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+        text-align: left;
+        /* padding: 2rem; */
+        letter-spacing: .1rem;
+        word-spacing: .25rem;
+        line-height: 2.5rem;
     }
 
     .about-img img{
@@ -507,11 +590,23 @@ span {
     .portfolio-container {
         grid-template-columns: repeat(2,1fr);
     }
+
+    .portfolio-layer h4 {
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    
+    }
 }
 
 @media (max-width : 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-layer h4 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    
     }
 }
 
