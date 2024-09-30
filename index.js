@@ -130,7 +130,10 @@ function submitForm(event) {
     if (isValid) {
         // alert('Form submitted successfully!');
         form.submit();
-        form.reset();
+
+        setTimeout(() => {
+            form.reset();
+        }, 1000);
         // Submit the form if validation passes
     }
 }
