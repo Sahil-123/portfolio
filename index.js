@@ -128,20 +128,12 @@ function submitForm(event) {
 
     // If the form is valid, allow form submission
     if (isValid) {
-        alert('Form submitted successfully!');
+        // alert('Form submitted successfully!');
+        form.submit();
+        form.reset();
         // Submit the form if validation passes
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
