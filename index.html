@@ -160,19 +160,36 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+        <form id="contactForm">
 
             <div class="input-box">
-                <input type="text" placeholder="Fill Name">
-                <input type="email" placeholder="Email Address">
+                <div class="inputWrape">
+                    <span class="errorMessage">Error in the text</span>
+                    <input type="text" placeholder="Fill Name" name="name">
+                </div>
+                <div class="inputWrape">
+                    <span class="errorMessage">Error in the text</span>
+                    <input type="email" placeholder="Email Address" name="email">
+                </div>
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <div class="inputWrape">
+                    <span class="errorMessage">Error in the text</span>
+                    <input type="number" id="mobileNumber" name="mobile" placeholder="Mobile Number">
+                </div>
+
+                <div class="inputWrape">
+                    <span class="errorMessage">Error in the text</span>
+                    <input type="text" placeholder="Email Subject" name="subject">
+                </div>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+
+            <div class="textAreaWrape">
+                <span class="errorMessage">Error in the text</span>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            </div>
+            <input type="button" value="Send Message" class="btn" onclick="submitForm(event)">
         </form>
 
 
