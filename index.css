@@ -477,7 +477,7 @@ textarea.errorBorder + .errorMessage {
 
 .footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
@@ -510,6 +510,10 @@ textarea.errorBorder + .errorMessage {
 .capito {
     font-size: 2.5rem;
     color: var(--text-color);
+}
+
+.couter {
+    width: 5rem;
 }
 
 
